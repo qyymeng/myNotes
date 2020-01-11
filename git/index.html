@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>git问题集锦 | 学习笔记</title>
+    <meta name="description" content="mydoc">
+    <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/myNotes/assets/css/0.styles.3fdb0883.css" as="style"><link rel="preload" href="/myNotes/assets/js/app.7b9e810f.js" as="script"><link rel="preload" href="/myNotes/assets/js/2.855146ad.js" as="script"><link rel="preload" href="/myNotes/assets/js/10.6540758d.js" as="script"><link rel="prefetch" href="/myNotes/assets/js/11.efa03882.js"><link rel="prefetch" href="/myNotes/assets/js/12.11710dca.js"><link rel="prefetch" href="/myNotes/assets/js/13.f61e08e4.js"><link rel="prefetch" href="/myNotes/assets/js/14.0206b560.js"><link rel="prefetch" href="/myNotes/assets/js/15.b885cd7f.js"><link rel="prefetch" href="/myNotes/assets/js/3.faddeaa3.js"><link rel="prefetch" href="/myNotes/assets/js/4.9dc43b64.js"><link rel="prefetch" href="/myNotes/assets/js/5.d9e685cf.js"><link rel="prefetch" href="/myNotes/assets/js/6.d7f455c0.js"><link rel="prefetch" href="/myNotes/assets/js/7.9e32de50.js"><link rel="prefetch" href="/myNotes/assets/js/8.2a7f198b.js"><link rel="prefetch" href="/myNotes/assets/js/9.4af617fb.js">
+    <link rel="stylesheet" href="/myNotes/assets/css/0.styles.3fdb0883.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/myNotes/" class="home-link router-link-active"><!----> <span class="site-name">学习笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/myNotes/git/" class="nav-link router-link-exact-active router-link-active">git</a></div><div class="nav-item"><a href="/myNotes/vue/" class="nav-link">vue</a></div><div class="nav-item"><a href="/myNotes/react/" class="nav-link">react</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/myNotes/git/" class="nav-link router-link-exact-active router-link-active">git</a></div><div class="nav-item"><a href="/myNotes/vue/" class="nav-link">vue</a></div><div class="nav-item"><a href="/myNotes/react/" class="nav-link">react</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>git问题集锦</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/myNotes/git/#_1-查看远程信息库" class="sidebar-link">1.查看远程信息库</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/myNotes/git/#_2-下载一个新项目" class="sidebar-link">2.下载一个新项目</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/myNotes/git/#_3-git-打开忽略识别文件夹大小写命令" class="sidebar-link">3.git 打开忽略识别文件夹大小写命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myNotes/git/#_4-git-push-origin与git-push-u-origin-master的区别" class="sidebar-link">4.git push origin与git push -u origin master的区别</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="git问题集锦"><a href="#git问题集锦" class="header-anchor">#</a> git问题集锦</h1> <h2 id="_1-查看远程信息库"><a href="#_1-查看远程信息库" class="header-anchor">#</a> 1.查看远程信息库</h2> <ul><li>当你从远程仓库克隆时，实际上Git自动把本地的master分支和远程的master分支对应起来了，并且远程仓库的默认名称是origin。要查看远程库的信息用git remote</li></ul> <div class="language- extra-class"><pre class="language-text"><code>$ git remote ---输出origin
+或者用git remote -v显示更详细的信息
+$ git remote -v
+---输出
+origin http://10.10.10.10:8080/项目目录/abc-abc-web.git (fetch)
+origin http://10.10.10.10:8080/项目目录/abc-abc-web.git (push)
+</code></pre></div><h2 id="_2-下载一个新项目"><a href="#_2-下载一个新项目" class="header-anchor">#</a> 2.下载一个新项目</h2> <ul><li>下载一个新项目并在本地新建开发分支，拉去远程开发分支代码到本地</li></ul> <div class="language- extra-class"><pre class="language-text"><code>1. git clone http://10.10.10.10:8080/项目目录/abc-abc-web.git ---克隆项目
+2. git fetch ---拉取所有分支
+3. git checkout -b dev origin/dev ---切换到dev分支
+4. git pull origin dev ---将dev分支拉取到本地dev分支
+</code></pre></div><h2 id="_3-git-打开忽略识别文件夹大小写命令"><a href="#_3-git-打开忽略识别文件夹大小写命令" class="header-anchor">#</a> 3.git 打开忽略识别文件夹大小写命令</h2> <div class="language- extra-class"><pre class="language-text"><code>git config core.ignorecase false
+</code></pre></div><h3 id="_4-git-push-origin与git-push-u-origin-master的区别"><a href="#_4-git-push-origin与git-push-u-origin-master的区别" class="header-anchor">#</a> 4.git push origin与git push -u origin master的区别</h3> <div class="language- extra-class"><pre class="language-text"><code>$ git push origin命令表示，将当前分支推送到origin主机的对应分支。 
+
+如果当前分支只有一个追踪分支，那么主机名都可以省略。 
+
+$ git push 如果当前分支与多个主机存在追踪关系，那么这个时候-u选项会指定一个默认主机，这样后面就可以不加任何参数使用git push。
+
+$ git push -u origin master 上面命令将本地的master分支推送到origin主机，同时指定origin为默认主机，后面就可以不加任何参数使用git push了。
+
+不带任何参数的git push，默认只推送当前分支，这叫做simple方式。此外，还有一种matching方式，会推送所有有对应的远程分支的本地分支。Git 2.0版本之前，默认采用matching方法，现在改为默认采用simple方式。
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/myNotes/assets/js/app.7b9e810f.js" defer></script><script src="/myNotes/assets/js/2.855146ad.js" defer></script><script src="/myNotes/assets/js/10.6540758d.js" defer></script>
+  </body>
+</html>
